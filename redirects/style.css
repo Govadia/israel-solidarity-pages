@@ -1,15 +1,29 @@
 @font-face {
     font-family: Poppins;
     src: url(assets/Poppins-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(assets/Poppins-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
+    font-family: 'Poppins', Arial, sans-serif;
     width: 1000px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     margin: 0;
     overflow-x: hidden;
+}
+
+b, strong {
+    font-weight: bold;
 }
 
 .container {
