@@ -4,9 +4,12 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    margin-top: 75px;
+    width: 10000px;
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    margin:0;
+    overflow-x:hidden;
 }
 
 .container {
