@@ -16,12 +16,30 @@
                 <div class="subtitle">Add an icon to your store header showing your support
                     for Israel during this difficult time.</div>
                 <div class="instructions">
-                    <div>To add the extension to your Shopify store:</div>
+                    <div>To add the icon using theme app extension for Online Store 2.0:</div>
                     <div class="instructions-body">1. Open your Shopify theme editor.
                         <br>2. Under the Header section, click <b>Header.</b>
                         <br>3. Click <b>Add block.</b>
                         <br>4. Under App Blocks, select <b>We Stand with Israel.</b> You can choose a
                         classic colored icon or dark colored icon.
+                        <br>5. Click <b>Save.</b>
+                    </div>
+                </div>
+                <div class="instructions">
+                    <div>To add the icon using liquid (available for all):</div>
+                    <div class="instructions-body">1. Open your Shopify theme editor.
+                        <br>2. Click on theme menu on the top (3 dots) and click on <b>Edit code.</b>
+                        <br>3. Go to your header liquid file
+                        <br>4. Add the following snippet to your header liquid file:
+                        <pre><code>&lt;div class="israel-solidarity-flag-container" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    &lt;img src="https://we-stand-with-israel.s3.amazonaws.com/assets/israel-solidarity-flag.svg"
+        class="israel-solidarity-flag-img"
+        title="We stand united in support for Israel, and condemn the acts of terrorism that have brought devastation and claimed innocent lives. We hope for stability and safety to be restored, hostages to be safely reunited with their loved ones, and lost lives be properly honored"
+        alt="We stand with Israel"
+        height="32"
+        width="32"
+        loading="eager">
+&lt;/div></code></pre>
                         <br>5. Click <b>Save.</b>
                     </div>
                 </div>

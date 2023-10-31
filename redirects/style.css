@@ -70,3 +70,9 @@ b, strong {
     margin-left: 5px;
     width: 530px;
 }
+
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    font-size: 12px;
+}
