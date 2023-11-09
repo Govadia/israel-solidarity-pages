@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <title>Israel Solidarity Extension</title>
     </head>
     <body>
@@ -25,19 +26,87 @@
                         <br>5. Click <b>Save.</b>
                     </div>
                 </div>
-                <br><br><br><br>
+                <br>
+                <div class="image-divider"></div>
+                <br>
                 <div class="instructions">
                     <div class="instructions-body">
-                        For non Shopify Online Store 2.0 users:<br>
-                        We are currently working on a solution. In the meantime, you can apply via email at: <a href="israel.solidarity.service@gmail.com">israel.solidarity.service@gmail.com</a> and we will manually add it for you.
+                        To add the icon for <b>non Shopify Online Store 2.0 users:</b><br>
+                        Copy one of the following code snippets and paste it into your Shopify theme editor in the header liquid file:
+                    </div>
+                    <br>
+                    <div class="instructions-body">
+                        For regular mode:
+                        <div class="copy-container">
+                            <div class="text1">
+                                &lt;iframe src="https://we-stand-with-israel.s3.amazonaws.com/assets/israel-solidarity-icon.html" style="width: 32px; height: 40px" frameborder="0"&gt;&lt;/iframe&gt;
+                            </div>
+                            <button class="copy-button" id="copyButton1">
+                                <span>&#x2398;</span> Copy
+                            </button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="instructions-body">
+                        For dark mode:
+                        <div class="copy-container">
+                            <div class="text2">
+                                &lt;iframe src="https://we-stand-with-israel.s3.amazonaws.com/assets/israel-solidarity-icon-dark.html" style="width: 32px; height: 40px" frameborder="0"&gt;&lt;/iframe&gt;
+                            </div>
+                            <button class="copy-button" id="copyButton2">
+                                <span>&#x2398;</span> Copy
+                            </button>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="instructions-body">
+                        Alternatively, you can apply via email at<b>
+                        </b> <a href="israel.solidarity.service@gmail.com">israel.solidarity.service@gmail.com</a> and we will manually add it for you.
                     </div>
                 </div>
             </div>
             <div class="images-container">
                 <img src="assets/store-layout-with-israel-solidarity-icon.png" alt="Store layout with Israel solidarity icon">
-                <img src="assets/extension-description.png" alt="Shopify extension app description" style=" width:515px; height: 289px;">
-                <img src="assets/dark-mode.png" alt="Shopify extension app description" style=" width:515px; height: 289px;">
+                <img src="assets/shopify-extension-description.png" alt="Shopify extension app description">
             </div>
         </div>
     </body>
+
+    <script>
+        const copyButton1 = document.getElementById('copyButton1');
+        const textToCopy1 = document.querySelector('.text1');
+
+        copyButton1.addEventListener('click', function () {
+            const text = textToCopy1.textContent;
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            copyButton1.innerHTML = 'Copied!';
+            setTimeout(function () {
+                copyButton1.innerHTML = '<span>&#x2398;</span> Copy';
+            }, 1000);
+        });
+
+        const copyButton2 = document.getElementById('copyButton2');
+        const textToCopy2 = document.querySelector('.text2');
+
+        copyButton2.addEventListener('click', function () {
+            const text = textToCopy2.textContent;
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            copyButton2.innerHTML = 'Copied!';
+            setTimeout(function () {
+                copyButton2.innerHTML = '<span>&#x2398;</span> Copy';
+            }, 1000);
+        });
+    </script>
 </html>
